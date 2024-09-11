@@ -1,6 +1,6 @@
 [project]
 name = "exonweb"
-version = "7.0.dev"
+version = "7.0"
 description = "Simple lightweight framework and utils for web applications."
 readme = "README.md"
 license = {file = "LICENSE.txt"}

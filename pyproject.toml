@@ -1,6 +1,6 @@
 [project]
 name = "exonweb"
-version = "7.2.dev"
+version = "7.2"
 description = "Simple lightweight framework and utils for web applications."
 readme = "README.md"
 license = "BSD-3-Clause"

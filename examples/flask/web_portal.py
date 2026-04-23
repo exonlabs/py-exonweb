@@ -5,7 +5,6 @@ from argparse import ArgumentParser
 
 from exonweb.flask.server import SimpleWebServer
 from exonweb.flask.view import BaseWebView
-from exonweb.gunicorn.extserver import ExtWebServer, WebArbiter
 
 logging.basicConfig(
     level=logging.INFO, stream=sys.stdout,
@@ -87,6 +86,7 @@ def main():
             websrv.add_view(view_cls)
 
         if args.ext_websrv:
+            from exonweb.gunicorn.extserver import ExtWebServer, WebArbiter
             ext_websrv = ExtWebServer(websrv, options=EXT_OPTIONS)
             WebArbiter(ext_websrv).run()
         else:
